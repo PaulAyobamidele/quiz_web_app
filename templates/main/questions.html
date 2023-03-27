@@ -1,0 +1,66 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+<div class="question__container-box">
+    <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+            <input type="hidden" id="myVar" name="username" value="{{ user.username }}">
+            <div id="countdown">Start</div>
+            <p id="score"></p>
+            <h2 id="question">Question text</h2>
+            <ul>
+                <li>
+                    <input
+                        type="radio"
+                        id="a"
+                        name="answer"
+                        class="answer"
+                    />
+                    <label id="a_text" for="a">Question</label>
+                </li>
+                <li>
+                    <input
+                        type="radio"
+                        id="b"
+                        name="answer"
+                        class="answer"
+                    />
+                    <label id="b_text" for="b">Question</label>
+                </li>
+                <li>
+                    <input
+                        type="radio"
+                        id="c"
+                        name="answer"
+                        class="answer"
+                    />
+                    <label id="c_text" for="c">Question</label>
+                </li>
+                <li>
+                    <input
+                        type="radio"
+                        id="d"
+                        name="answer"
+                        class="answer"
+                    />
+                    <label id="d_text" for="d">Question</label>
+                </li>
+                <li>
+                    <input
+                        type="radio"
+                        id="e"
+                        name="answer"
+                        class="answer"
+                    />
+                    <label id="e_text" for="e">Question</label>
+                </li>
+            </ul>
+        </div>
+        <input type="hidden" id="Url" data-url="{% url 'login' %}" />
+        <button id="submit">Submit</button>
+    </div>
+</div>
+
+
+{% endblock %}

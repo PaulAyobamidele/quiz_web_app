@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+
+{% block content %}
+<main>
+    <h1>Welcome {{user.username}}, to your Computer-Based Test</h1>
+    <h2>Instructions: </h3>
+    <p>The test will last for 20mins. You are expected to answer all questions before your time runs out. You can not get the next question without answering the current.
+        Goodluck to you {{user.username}}
+    </p>
+    <h3>Click the link below to login</h3>
+    <div class="login">
+        <a href="{% url 'login' %}">START</a>
+    </div>
+</main>
+{% endblock %}
